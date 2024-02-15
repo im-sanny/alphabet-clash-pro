@@ -29,7 +29,7 @@
             <div class="flex flex-col items-center gap-14 pt-14">
                 <!-- screen -->
                 <div>
-                    <div class="artboard artboard-horizontal phone-6 border-[8px] rounded-xl border-[#010313CC] bg-[#FFFFFFB3]">
+                    <div class="artboard artboard-horizontal w-[600px] min-h-[300px] border-[8px] rounded-xl border-[#010313CC] bg-[#FFFFFFB3]">
                         
                         <div class="flex justify-center">
                             <p class="bg-[#2F2941] px-4 py-1 text-white rounded-b-xl">Don't watch keyboard  while playing...</p>
@@ -78,28 +78,31 @@
                 <!-- keyboard end -->
             </div>
                <!-- life score -->
-            <div class="flex justify-between">
+            <div class="flex justify-between w-2/4">
+                <!-- display life -->
                 <button class="btn rounded-full text-white bg-purple-500 border-none px-4">
                     Life
                     <img src="images/heart.svg" alt="">
-                    <span>1</span>
+                    <span id="current-life">5</span>
                   </button>
+                  <!-- display score -->
                   <button class="btn rounded-full text-white bg-blue-900 border-none px-4">
                     Score
                     <img src="images/doller.svg" alt="">
-                    <span>1</span>
+                    <span id="current-score">0</span>
                   </button>
             </div>
         </section>
         <!-- playground end -->
         <!-- final score start -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="score flex justify-center items-center min-h-screen hidden">
           <div class="text-white text-center space-y-4 bg-[#FFFFFF33] p-4 rounded-lg">
+            <h4 class="text-3xl">game over!</h4>
             <h1 class="text-8xl">
                 <span class="font-extrabold">Score:</span>
-                <span>14</span>
+                <span id="game-score">14</span>
             </h1>
-            <button class="btn">Play Again</button>
+            <button onclick="play()" class="btn">Play Again</button>
             <p>Practice will make you a pro</p>
           </div>
         </section>
